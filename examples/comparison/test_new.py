@@ -42,8 +42,8 @@ def csv_example():
     marginals =[]
     the_keys = []
     data = np.loadtxt("../example_data/csv-example/test_data.csv", delimiter=",")
-    X = np.array(data[:, :2], dtype = np.float)
-    Y = np.array(data[:,-1:], dtype = np.float).flatten()
+    X = np.array(data[:, :2], dtype = np.float64)
+    Y = np.array(data[:,-1:], dtype = np.float64).flatten()
     # config space
     pcs = list(zip(np.min(X,axis=0), np.max(X, axis=0)))
     cs = ConfigSpace.ConfigurationSpace()

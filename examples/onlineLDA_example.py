@@ -17,7 +17,7 @@ f = open(param_file, 'rb')
 
 cs = ConfigurationSpace()
 for row in f:
-    cs.add_hyperparameter(UniformFloatHyperparameter("%s" %row[0:4].decode('utf-8'), np.float(row[6:9]), np.float(row[10:13]),np.float(row[18:21])))
+    cs.add_hyperparameter(UniformFloatHyperparameter("%s" %row[0:4].decode('utf-8'), np.float64(row[6:9]), np.float64(row[10:13]),np.float64(row[18:21])))
 param = cs.get_hyperparameters()
 
 

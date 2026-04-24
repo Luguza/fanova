@@ -375,7 +375,7 @@ class fANOVA(object):
         tuple 
             marginal mean prediction and corresponding variance estimate
         """
-        sample = np.full(self.n_dims, np.nan, dtype=np.float)
+        sample = np.full(self.n_dims, np.nan, dtype=np.float64)
         for i in range(len(dimlist)):
             sample[dimlist[i]] = values_to_predict[i]
 
